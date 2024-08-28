@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #007BFF;
+    --primary-hover-color: #0056b3;
+    --secondary-color: #FF6347;
+    --secondary-hover-color: #E5533D;
+    --success-color: #28a745;
+    --success-hover-color: #218838;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg-color: #fff;
+    --container-shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #ccc;
+    --info-text-color: #777;
+    --button-text-color: #fff;
+    --black-color: #000000;
+    --fonte-primaria: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background-color: var(--primary-color);
+    padding: 10px;
+    height: auto;
+
+}
+
+.header__logo {
+    max-height: 3.75rem; /* 60px */
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    background-color: var(--background-color);
+    padding: 1.25rem; /* 20px */
+    border-radius: 0.5rem; /* 8px */
+    box-shadow: 0 0 0.625rem var(--container-shadow-color); /* 10px */
+    width: auto;
+    max-width: 800px;
+    margin-bottom: 1.25rem; /* 20px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading-primary {
+    font-size: 2rem; /* 32px */
+    margin-bottom: 1rem; /* 16px */
+}
+
+.heading-secondary {
+    font-size: 1.5rem; /* 24px */
+    margin-bottom: 0.75rem; /* 12px */
+}
+
+.text {
+    font-size: 1rem; /* 16px */
+}
+
+.list {
+    list-style-type: disc;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.textarea {
+    width: 100%; /* Ocupa 100% da largura do container */
+    height: 10rem; /* Altura fixa de 10rem */
+    padding: 0.625rem; /* 10px */
+    border-radius: 0.3125rem; /* 5px */
+    border: 0.0625rem solid var(--border-color); /* 1px */
+    margin-bottom: 0.625rem; /* 10px */
+    font-size: 1rem; /* 16px */
+    box-sizing: border-box; /* Para garantir que a largura inclua o padding e a borda */
+    resize: none; /* Impede o redimensionamento manual da textarea */
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0.3rem;
+    margin-bottom: 0.625rem; /* 10px */
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.625rem 1.25rem; /* 10px 20px */
+    border-radius: 0.3125rem; /* 5px */
+    cursor: pointer;
+    font-size: 1rem; /* 16px */
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.clear-btn {
+    background-color: var(--secondary-color);
+}
+
+.clear-btn:hover {
+    background-color: var(--secondary-hover-color);
+}
+
+.info-text {
+    font-size: 0.875rem; /* 14px */
+    color: var(--info-text-color);
+    margin-bottom: 1.25rem; /* 20px */
+    text-align: center;
+}
+
+.output-container {
+    background-color: var(--background-color);
+    padding: 0.625rem; /* 10px */
+    border-radius: 0.3125rem; /* 5px */
+    border: 0.0625rem solid var(--border-color); /* 1px */
+    width: auto;
+    margin-bottom: 1.25rem; /* 20px */
+}
+
+.output-text {
+    margin: 0;
+    text-align: center;
+}
+
+.copy-btn {
+    background-color: var(--success-color);
+    width: 100%;
+}
+
+.copy-btn:hover {
+    background-color: var(--success-hover-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.footer__text {
+    font-size: 1.25rem; /* 20px */
+    color: var(--black-color);
+    font-family: var(--fonte-secundaria);
+}
+
+/* Media Query para telas com largura máxima de 1200px */
+@media (max-width: 750PX) {
+    .main {
+        padding: 1rem; /* Redução do padding */
+    }
+
+    .container {
+        padding: 1rem; /* Ajuste do padding */
+        max-width: 100%; /* Maximiza a largura em telas menores */
+        box-shadow: none; /* Remove a sombra para simplificar o design */
+    }
+
+    .heading-primary {
+        font-size: 1.75rem; /* Redução do tamanho da fonte */
+    }
+
+    .heading-secondary {
+        font-size: 1.25rem; /* Redução do tamanho da fonte */
+    }
+
+    .textarea {
+        height: 8rem; /* Redução da altura da textarea */
+        font-size: 0.875rem; /* Redução do tamanho da fonte */
+    }
+
+    .buttons {
+        gap: 0.3rem; /* 10px de espaçamento entre os botões */
+        flex-direction: column; /* Organiza os botões em coluna */
+        align-items: stretch; /* Alinha os botões para preencher a largura */
+        margin-bottom: 1rem; /* Ajuste da margem */
+    }
+
+    .btn {
+        padding: 0.5rem; /* Ajuste do padding */
+        font-size: 0.875rem; /* Redução do tamanho da fonte */
+        width: 100%; /* Botões ocupam 100% da largura */
+    }
+
+    .copy-btn {
+        width: 100%; /* Garante que o botão de copiar ocupe 100% da largura */
+    }
+
+    .info-text {
+        font-size: 0.75rem; /* Redução do tamanho da fonte */
+        margin-bottom: 1rem; /* Ajuste da margem */
+    }
+
+    .footer{
+        height: auto;
+    }
+
+    .footer__text {
+        font-size: 1rem; /* Redução do tamanho da fonte */
+    }
+}

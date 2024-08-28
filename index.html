@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio Criptografia</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <img src="imagens/logo.png" class="header__logo" alt="Logo">
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="interacao">
+                <h2 class="heading-secondary">Criptografia:</h2>
+                <textarea id="input-text" class="textarea" placeholder="Digite seu texto"></textarea>
+                <div class="buttons">
+                    <button id="encrypt-btn" class="btn">Criptografar</button>
+                    <button id="decrypt-btn" class="btn">Descriptografar</button>
+                    <button id="clear-btn" class="btn clear-btn">Limpar</button>
+                </div>
+                <div class="output-container">
+                    <p id="output-text" class="output-text">Nenhuma mensagem encontrada</p>
+                </div>
+                <button id="copy-btn" class="btn copy-btn">Copiar</button>
+                <p class="info-text">Apenas letras minúsculas e sem acento.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">Desenvolvido por Maria Luiza</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
